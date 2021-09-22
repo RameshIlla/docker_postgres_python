@@ -15,7 +15,8 @@ Either clone the repo of download as zip
 psql postgres://postgres_user:postgres_pwd@localhost:5432/postgresdb
 
 In case you want to remove images you can run this command:
-    docker stop docker_postgres_python_app_1 #First stop the container
-    docker  rm docker_postgres_python_app_1 #Then Remove the container
-    docker image rm 'docker_postgres_python_app' #Finally delete the image
+    docker compose down #stop and remove containers listed in the docker-compose file
+
+    docker image rm 'docker_postgres_python_app' # delete the image
+    docker image rm 'docker_postgres_python_postgresserver' # delete the image
 </pre>
